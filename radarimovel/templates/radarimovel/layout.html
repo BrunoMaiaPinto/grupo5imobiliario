@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Red+Rose:wght@300..700&family=Sono:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{% static 'radarimovel/styles.css' %}" rel="stylesheet" />
+    <script defer src="{% static 'radarimovel/script.js' %}"></script>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'radarimovel/favicon.ico' %}"
+    />
+    <title>Radar Imóvel</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="{% url 'radarimovel:index' %}">
+        <img
+          src="{% static 'radarimovel/logo.png' %}"
+          alt="Radar Imóvel"
+          class="logo"
+        />
+      </a>
+      <nav>
+        <ul class="nav">
+          <li>
+            <a href="{% url 'radarimovel:consulta' %}">Consultar Imóveis</a>
+          </li>
+          <li>
+            <a href="{% url 'radarimovel:inserir' %}">Inserir Imóvel</a>
+          </li>
+          <li><a href="{% url 'radarimovel:login' %}">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    {% block body %} {% endblock %}
+    <footer class="footer">&copy; <span id="year"></span> Radar Imovél</footer>
+  </body>
+</html>

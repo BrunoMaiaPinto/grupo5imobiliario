@@ -1,0 +1,85 @@
+{% extends 'radarimovel/layout.html' %} {% block body %}
+<div class="consulta_head">
+  <h1>Inserir Imóvel:</h1>
+  <h3>
+    Tens um imóvel que queres vender? Quer sejas particular ou profissional o
+    Radar Imóvel é a tua solução.
+  </h3>
+</div>
+
+<div class="formulario">
+  <form class="inserir_form" action="" method="POST">
+    {% csrf_token %}
+    <div class="label_input">
+      <label class="inserir_label" for="proprietarios">Proprietário</label>
+      <select name="proprietarios" id="proprietarios" required>
+        <option value="">Proprietário?</option>
+        {% for proprietario in proprietarios %}
+        <option value="{{ proprietario.nifproprietario }}">
+          {{ proprietario.nome }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <!-- <select name="id_localizacao" id="id_localizacao" required>
+      <option value="">-- Selecione uma Freguesia --</option>
+      {% for local in localizacao %}
+      <option value="{{ local.id_localizacao }}">{{ local.freguesia }}</option>
+      {% endfor %}
+    </select> -->
+    <div class="label_input">
+      <label class="inserir_label" for="Tipo_de_imovel">Tipo de Imóvel</label>
+      <input type="text" name="Tipo_de_imovel" id="Tipo_de_imovel" />
+    </div>
+
+    <div class="label_input">
+      <label class="inserir_label" for="Tipologia">Tipologia</label>
+      <input type="text" name="Tipologia" id="Tipologia" />
+    </div>
+
+    <div class="label_input">
+      <label class="inserir_label" for="Morada">Morada</label>
+      <input type="text" name="Morada" id="Morada" />
+    </div>
+
+    <div class="label_input">
+      <label class="inserir_label" for="Codigo_postal">Código Postal</label>
+      <input type="text" name="Codigo_postal" id="Codigo_postal" />
+    </div>
+
+    <div class="label_input">
+      <label class="inserir_label" for="Preco_pedido">Preço</label>
+      <input type="text" name="Preco_pedido" id="Preco_pedido" />
+    </div>
+
+    <div class="label_input">
+      <label class="inserir_label" for="Fotos">Fotos</label>
+      <input type="file" name="Fotos" id="Fotos" />
+    </div>
+
+    <div class="label_input">
+      <label class="inserir_label" for="area_m2">Área</label>
+      <input type="text" name="area_m2" id="area_m2" />
+    </div>
+
+    <div class="label_input">
+      <label class="inserir_label" for="garagem_estacionamento">Garagem</label>
+
+      <!-- <select name="garagem_estacionamento">
+        <option value="">Garagem?</option>
+        <option value="1">Sim</option>
+        <option value="0">Não</option>
+      </select> -->
+
+      <input
+        type="text"
+        name="garagem_estacionamento"
+        id="garagem_estacionamento"
+      />
+    </div>
+    <button class="btn_inserir" type="submit">Adicionar</button>
+  </form>
+</div>
+
+{% endblock %}

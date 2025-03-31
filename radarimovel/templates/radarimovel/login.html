@@ -1,0 +1,28 @@
+{% extends 'radarimovel/layout.html' %} {% block body %}
+
+<div class="container_login">
+  <h1>Inicia sessão ou regista-te</h1>
+  <form class="login_form" method="POST">
+    {% csrf_token %}
+    <label class="login_label" for="username">Nome de Utilizador</label>
+    <input
+      class="login_input"
+      type="text"
+      name="username"
+      id="username"
+      required
+    />
+    <label class="login_label" for="password">Palavra-passe</label>
+    <input
+      class="login_input"
+      type="password"
+      name="password"
+      id="password"
+      required
+    />
+    <button class="btn_login" type="submit">Entrar</button>
+  </form>
+</div>
+<!-- <button type="submit">Particular</button>
+<button type="submit">Profissional</button> -->
+{% endblock %}

@@ -1,0 +1,282 @@
+/* // COLOR VARIABLES
+const color-primary= #c69963;
+$color-primary-dark: #b28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
+
+// Responsive Breakpoints
+
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5rem; // 600px */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #101d2c;
+  font-family: "Red Rose", sans-serif;
+  color: #f9f7f6;
+  font-weight: 300;
+  line-height: 1.6;
+  padding: 2rem 4rem;
+  font-size: 1.6rem;
+}
+
+/* LAYOUT */
+
+.header {
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.logo {
+  height: 10rem;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav li {
+  color: #aaa;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem;
+  display: block;
+}
+
+a {
+  color: #aaa;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: #c69963;
+}
+
+.footer {
+  color: #aaa;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+button {
+  background-color: #f9f7f6;
+  width: 100%;
+  border: none;
+  align-self: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 100px;
+  font-weight: bold;
+  transition: all 0.3s;
+  font-family: inherit;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  color: #101d2c;
+}
+
+button:hover {
+  background-color: #c69963;
+  color: #101d2c;
+}
+
+/* CONSULTA PAGE */
+
+.consulta_head {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+th {
+  font-size: 2rem;
+}
+
+.consulta_table {
+  padding: 5rem;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 5rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.tabela_linha:hover {
+  background-color: #c69963;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.consulta_form {
+  display: grid;
+  grid-template-columns: repeat(5, 250px);
+  align-content: center;
+  justify-items: center;
+  row-gap: 10px;
+  justify-self: center;
+  margin-bottom: 6rem;
+}
+
+.consulta_form input {
+  border: 1px solid #aaa;
+  width: 200px;
+  margin: 10px;
+  border-radius: 100px;
+  background-color: #aaa;
+  font-family: inherit;
+  padding: 1rem;
+  font-size: 1.6rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.consulta_select {
+  width: 200px;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.consulta_label {
+  font-size: 2rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.btn_consulta {
+  width: 200px;
+  align-self: center;
+  margin-top: 30px;
+}
+
+/* 
+.campos {
+  display: flex;
+}
+
+.campos_formulario {
+  display: flex;
+  flex-direction: column;
+} */
+
+th {
+  color: #c69963;
+}
+
+/* INSERIR PAGE */
+
+.formulario {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.inserir_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.label_input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.inserir_label {
+  font-size: 2rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.formulario input,
+select {
+  border: 1px solid #aaa;
+  width: 320px;
+  margin: 10px;
+  border-radius: 100px;
+  background-color: #aaa;
+  font-family: inherit;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn_inserir {
+  margin-top: 16px;
+}
+
+/* INDEX PAGE */
+
+.index {
+  background-image: url(imagem.jpg);
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  opacity: 60%;
+}
+
+/* LOGIN PAGE */
+
+.container_login {
+  display: grid;
+  justify-items: center;
+}
+
+.login_form {
+  display: grid;
+  justify-items: center;
+}
+
+.login_label {
+  font-size: 2rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.container_login input {
+  border: 1px solid #aaa;
+  width: 100%;
+  margin: 10px;
+  border-radius: 100px;
+  background-color: #aaa;
+  font-family: inherit;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn_login {
+  margin-top: 1rem;
+}

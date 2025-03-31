@@ -1,0 +1,96 @@
+{% extends 'radarimovel/layout.html' %} {% block body %}
+<div class="consulta_head">
+  <h1>Consulta Imóvel</h1>
+  <h3>
+    Nós ajudamos a encontrar a tua casa de sonho. Não importa o tipo de imóvel,
+    tipologia ou área, se consegues sonhar conseguimos encontrar!
+  </h3>
+</div>
+
+<!-- <label for="imoveis">Escolha um Tipo de Imóvel:</label>
+
+<select name="imoveis" id="imoveis">
+  {% for imovel in imoveis %}
+  <option value="{{ imovel.nome }}">{{ imovel.tipo_de_imovel }}</option>
+  {% endfor %}
+</select> -->
+
+<form class="consulta_form" action="" method="POST">
+  {% csrf_token %}
+
+  <div class="campo">
+    <label class="consulta_label" for="Tipologia">Tipologia</label>
+    <input type="text" name="Tipologia" id="Tipologia" />
+  </div>
+      
+  <div class="campo">
+    <label class="consulta_label" for="tipo_de_imovel">Tipo</label>
+    <input type="text" name="tipo_de_imovel" id="tipo_de_imovel" />
+  </div>
+      
+  <div class="campo">
+    <label class="consulta_label" for="morada">Morada</label>
+    <input type="text" name="morada" id="morada" />
+  </div>
+      
+  <div class="campo">
+    <label class="consulta_label" for="codigo_postal">Código Postal</label>
+    <input type="text" name="codigo_postal" id="codigo_postal" />
+  </div>
+  
+  <div class="campo campo_select">
+    <label class="consulta_label" for="garagem_estacionamento">Garagem</label>
+    <select class="consulta_select" name="garagem_estacionamento" id="garagem_estacionamento">
+      <option value="">Garagem?</option>
+      <option value="1">Sim</option>
+      <option value="0">Não</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label class="consulta_label" for="Preço Mínimo">Preço Mínimo</label>
+    <input type="text" name="preco_min" id="Preço Mínimo">
+  </div>
+
+  <div class="campo">
+    <label class="consulta_label" for="Preço Máximo">Preço Máximo</label>
+    <input type="text" name="preco_max" id="Preço Máximo">
+  </div>
+    
+  <div class="campo">
+    <label class="consulta_label" for="Área Mínima">Área Mínima</label>
+    <input type="text" name="area_min" id="Área Mínima">
+  </div>
+
+  <div class="campo">
+    <label class="consulta_label" for="Área Máxima">Área Máxima</label>
+    <input type="text" name="area_max" id="Área Máxima">
+  </div>
+
+    
+  <button class="btn_consulta" type="submit">Pesquisar</button>
+  </form>
+
+  <table class="consulta_table">
+    <tr>
+      <th>Tipo de Imovél</th>
+      <th>Tipologia</th>
+      <th>Área</th>
+      <th>Morada</th>
+      <th>Código Postal</th>
+      <th>Preço</th>
+    </tr>
+    {% for imovel in imoveis %}
+    <tr class="tabela_linha">
+      <td>{{ imovel.tipo_de_imovel }}</td>
+      <td>{{ imovel.tipologia }}</td>
+      <td>{{ imovel.area_m2 }} m2</td>
+      <td>{{ imovel.morada }}</td>
+      <td>{{ imovel.codigo_postal }}</td>
+      <td>{{ imovel.preco_pedido }}€</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  {% endblock %}
+</form>
