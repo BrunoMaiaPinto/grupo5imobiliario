@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from .models import Imovel, Localizacao, Proprietario
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 def index(request):
@@ -20,6 +20,9 @@ def user_login(request):
             return render(request, 'radarimovel/login.html', {'error': 'Credenciais inválidas'})
     return render(request, 'radarimovel/login.html')  # Página de login
 
+def user_logout(request):
+    logout(request)
+    return redirect('radarimovel:index')  # Redirect to the homepage after logout
 
 def imoveis(request):
     imoveis = Imovel.objects.all()

@@ -20,6 +20,9 @@ class Agencias(models.Model):
         managed = False
         db_table = 'agencias'
 
+    def __str__(self):
+        return self.nome
+
 
 class Angaria(models.Model):
     nifconsultor = models.OneToOneField('Consultores', models.DO_NOTHING, db_column='nifconsultor', primary_key=True)  # The composite primary key (nifconsultor, id_imovel) found, that is not supported. The first column is selected.
@@ -103,3 +106,5 @@ class RedeAgencia(models.Model):
         managed = False
         db_table = 'rede_agencia'
 
+    def __str__(self):
+        return self.densocial

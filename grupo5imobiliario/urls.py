@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from radarimovel import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('radarimovel/', include('radarimovel.urls')),
+    path('', views.index, name='index'),
 ]

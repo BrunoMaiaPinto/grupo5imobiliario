@@ -47,7 +47,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 }
 
 .logo {
@@ -56,7 +56,7 @@ body {
 
 .nav {
   display: flex;
-  gap: 10px;
+  align-items: center;
 }
 
 .nav li {
@@ -71,6 +71,9 @@ a {
   color: #aaa;
   text-decoration: none;
   transition: all 0.3s;
+  text-transform: uppercase;
+  padding: 1rem;
+  display: block;
 }
 
 a:hover {

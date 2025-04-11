@@ -33,10 +33,16 @@
           <li>
             <a href="{% url 'radarimovel:consulta' %}">Consultar Imóveis</a>
           </li>
+          {% if user.is_authenticated %}
           <li>
             <a href="{% url 'radarimovel:inserir' %}">Inserir Imóvel</a>
           </li>
-          <li><a href="{% url 'radarimovel:login' %}">Login</a></li>
+          <li>
+            <a href="{% url 'radarimovel:logout' %}">Logout</a>
+            {% else %}
+            <a href="{% url 'radarimovel:login' %}">Login</a>
+            {% endif %}
+          </li>
         </ul>
       </nav>
     </header>

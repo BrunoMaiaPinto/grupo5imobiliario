@@ -12,6 +12,7 @@ testtest
 
 """
 
+import dj_database_url
 from pathlib import Path
 import pymysql
 
@@ -83,13 +84,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'imobiliario_grupo5',
-        'USER': '7784421',
-        'PASSWORD': 'Bruno7784421',
-        'HOST':'172.23.21.121',
+        'USER': 'root',
+        'PASSWORD': 'newpassword',
+        'HOST':'localhost',
         'PORT':'3306',
     }
 }
 
+DATABASES['default'] = dj_database_url.parse("postgresql://imobiliario_grupo5_user:7xLKeXTrz6uIrbUUBv2Tvw1UW00LQpQv@dpg-cvsihvh5pdvs73bmipig-a.oregon-postgres.render.com/imobiliario_grupo5")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
