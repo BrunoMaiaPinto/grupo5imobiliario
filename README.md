@@ -4,6 +4,9 @@ This project was developed as part of a **programming course at IEFP**. It is a 
 
 ---
 
+👥 Credits
+This project was developed in a group as part of the Python programming course at IEFP.
+
 ## 📌 Project Description: Real Estate Portal
 
 **Radar Imóvel** is a **real estate portal** designed for both **property owners** and **potential buyers**. It offers the following features:
@@ -22,9 +25,6 @@ The application was built using the **Django** web framework, and a relational d
 - **Django:** Python web framework  
 - **HTML, CSS, JavaScript:** Used for structuring, styling, and adding interactivity to the frontend  
 - **MySQL:** Ralational Database  
-
-👥 Credits
-This project was developed in a group as part of the Python programming course at IEFP.
 
 ![Captura de ecrã 2025-04-04 104227](https://github.com/user-attachments/assets/9bec38bc-b354-40ca-8f7b-cca2c1773c3c)
 ![Captura de ecrã 2025-04-04 104252](https://github.com/user-attachments/assets/293d33c8-1901-49d4-904b-bc1432e0d7c2)
