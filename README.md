@@ -1,6 +1,6 @@
 # 🏘️ Radar Imóvel
 
-This project was developed as part of a **programming course at IEFP**. It is a group project focused on building a **web application for managing real estate properties**.
+This project was developed as part of a **programming course at IEFP**. It is a group project focused on building a **web application for managing real estate portal**.
 
 ---
 
